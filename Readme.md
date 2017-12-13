@@ -7,6 +7,11 @@ Treed wants to be for tree editing what ace is for text editing. Extensible, cus
 
 [![screenshot](docs/screenshot.png)](http://jaredly.github.io/treed/)
 
+## Start Demo
+```bash
+python server.py -p WEB_PORT
+```
+
 ## Features
 
 ### Keyboard navigation
