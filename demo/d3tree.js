@@ -184,6 +184,3 @@ function update(source, setCollapsed) {
     */
   }
 }
-
-start(flare_data);
-

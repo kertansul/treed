@@ -4,6 +4,7 @@ import tornado.httpserver
 import optparse
 import os
 import argparse
+import json
 
 # define path parameters
 DEMO_FOLDER = './demo/'
@@ -13,11 +14,17 @@ LIB_URL_PREFIX = '/lib/'
 CSS_FOLDER = './css/'
 CSS_URL_PREFIX = '/css/'
 
+TREE_FILENAME = './demo/flare-data.json'
+
 app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+
+    with open(TREE_FILENAME) as f:
+        tree_json = json.load(f)
+
+    return render_template('index.html', tree_json=tree_json)
 
 def start_tornado(app, port=5000):
 
